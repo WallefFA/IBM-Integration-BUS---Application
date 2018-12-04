@@ -1,0 +1,32 @@
+CREATE COMPUTE MODULE getLocalizacao_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+
+		DECLARE propriedadesSize INTEGER CARDINALITY (InputRoot.JSON.Data.propriedades.Item[]);
+		DECLARE i INT 0;
+		
+		SET OutputRoot.JSON.Data.cities TYPE = JSON.Array;
+
+		WHILE i < propriedadesSize DO
+
+			SET i = i + 1;
+
+			SET OutputRoot.JSON.Data.cities.Item[i].city = InputRoot.JSON.Data.propriedades.Item[i].propriedade.localizacao;
+
+			DECLARE commoditiesSize INTEGER CARDINALITY (InputRoot.JSON.Data.propriedades.Item[i].propriedade.commodities.Item[]);
+			DECLARE j INT 0;
+
+			SET OutputRoot.JSON.Data.cities.Item[i].commodities TYPE = JSON.Array;
+
+			WHILE j < commoditiesSize DO
+
+				SET j = j + 1;
+
+				SET OutputRoot.JSON.Data.cities.Item[i].commodities.Item[j].commodity = InputRoot.JSON.Data.propriedades.Item[i].propriedade.commodities.Item[j].descricao;
+
+			END WHILE;
+
+		END WHILE;
+		RETURN TRUE;
+	END;
+END MODULE;

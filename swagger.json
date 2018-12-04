@@ -1,0 +1,32 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "title" : "AgroApplication",
+    "version" : "1.0.0",
+    "description" : "AgroApplication"
+  },
+  "paths" : {
+    "/propriedades/{localizacao}" : {
+      "get" : {
+        "operationId" : "getLocalizacao",
+        "responses" : {
+          "200" : {
+            "description" : "The operation was successful.",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        },
+        "produces" : [ "application/json" ],
+        "description" : "Retrieve localizacao",
+        "parameters" : [ {
+          "required" : true,
+          "name" : "localizacao",
+          "in" : "path",
+          "type" : "string"
+        } ]
+      }
+    }
+  },
+  "basePath" : "/agroapplication/v1"
+}

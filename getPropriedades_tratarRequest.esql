@@ -1,0 +1,11 @@
+DECLARE baseURL EXTERNAL CHARACTER '';
+
+CREATE COMPUTE MODULE getLocalizacao_tratarRequest
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+	
+		-- SET InputLocalEnvironment.Destination.HTTP.RequestURL = baseURL || InputLocalEnvironment.REST.Input.Parameters.localizacao;  
+	
+		RETURN TRUE;
+	END;
+END MODULE;
