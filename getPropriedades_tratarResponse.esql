@@ -2,63 +2,63 @@ CREATE COMPUTE MODULE getLocalizacao_tratarResponse
 	CREATE FUNCTION Main() RETURNS BOOLEAN
 	BEGIN
 		
-		SET OutputRoot.JSON.Data.propriedades TYPE = JSON.Array;
+		SET OutputRoot.JSON.Data.response.propriedades TYPE = JSON.Array;
 		
-		SET OutputRoot.JSON.Data.propriedades.Item[1].propriedade.id = '1';
-		SET OutputRoot.JSON.Data.propriedades.Item[1].propriedade.descrição = 'Fazenda Boa Esperança';
-		SET OutputRoot.JSON.Data.propriedades.Item[1].propriedade.localizacao = 'Unaí MG'; 
+		SET OutputRoot.JSON.Data.response.propriedades.Item[1].propriedade.id = '1';
+		SET OutputRoot.JSON.Data.response.propriedades.Item[1].propriedade.descricao = 'Fazenda Boa Esperança';
+		SET OutputRoot.JSON.Data.response.propriedades.Item[1].propriedade.localizacao = 'Unaí MG'; 
 		
-		SET OutputRoot.JSON.Data.propriedades.Item[1].propriedade.maquinas TYPE = JSON.Array;
+		SET OutputRoot.JSON.Data.response.propriedades.Item[1].propriedade.maquinas TYPE = JSON.Array;
 		
-		SET OutputRoot.JSON.Data.propriedades.Item[1].propriedade.maquinas.Item[1].id = '1';
-		SET OutputRoot.JSON.Data.propriedades.Item[1].propriedade.maquinas.Item[1].descricao = 'Trator';
-		SET OutputRoot.JSON.Data.propriedades.Item[1].propriedade.maquinas.Item[1].marca = 'John Deere';
-		SET OutputRoot.JSON.Data.propriedades.Item[1].propriedade.maquinas.Item[1].modelo = '7200J';
-		SET OutputRoot.JSON.Data.propriedades.Item[1].propriedade.maquinas.Item[1].ano = '2018';
+		SET OutputRoot.JSON.Data.response.propriedades.Item[1].propriedade.maquinas.Item[1].id = '1';
+		SET OutputRoot.JSON.Data.response.propriedades.Item[1].propriedade.maquinas.Item[1].descricao = 'Trator';
+		SET OutputRoot.JSON.Data.response.propriedades.Item[1].propriedade.maquinas.Item[1].marca = 'John Deere';
+		SET OutputRoot.JSON.Data.response.propriedades.Item[1].propriedade.maquinas.Item[1].modelo = '7200J';
+		SET OutputRoot.JSON.Data.response.propriedades.Item[1].propriedade.maquinas.Item[1].ano = '2018';
 		
-		SET OutputRoot.JSON.Data.propriedades.Item[1].propriedade.maquinas.Item[2].id = '2';
-		SET OutputRoot.JSON.Data.propriedades.Item[1].propriedade.maquinas.Item[2].descricao = 'Trator';
-		SET OutputRoot.JSON.Data.propriedades.Item[1].propriedade.maquinas.Item[2].marca = 'John Deere';
-		SET OutputRoot.JSON.Data.propriedades.Item[1].propriedade.maquinas.Item[2].modelo = '5075EF';
-		SET OutputRoot.JSON.Data.propriedades.Item[1].propriedade.maquinas.Item[2].ano = '2018';
+		SET OutputRoot.JSON.Data.response.propriedades.Item[1].propriedade.maquinas.Item[2].id = '2';
+		SET OutputRoot.JSON.Data.response.propriedades.Item[1].propriedade.maquinas.Item[2].descricao = 'Trator';
+		SET OutputRoot.JSON.Data.response.propriedades.Item[1].propriedade.maquinas.Item[2].marca = 'John Deere';
+		SET OutputRoot.JSON.Data.response.propriedades.Item[1].propriedade.maquinas.Item[2].modelo = '5075EF';
+		SET OutputRoot.JSON.Data.response.propriedades.Item[1].propriedade.maquinas.Item[2].ano = '2018';
 		
-		SET OutputRoot.JSON.Data.propriedades.Item[1].propriedade.commodities TYPE = JSON.Array;
+		SET OutputRoot.JSON.Data.response.propriedades.Item[1].propriedade.commodities TYPE = JSON.Array;
 		
-		SET OutputRoot.JSON.Data.propriedades.Item[1].propriedade.commodities.Item[1].id = '1';
-		SET OutputRoot.JSON.Data.propriedades.Item[1].propriedade.commodities.Item[1].descricao = 'Milho';
-		SET OutputRoot.JSON.Data.propriedades.Item[1].propriedade.commodities.Item[1].areaCultivada = '450 hc';
+		SET OutputRoot.JSON.Data.response.propriedades.Item[1].propriedade.commodities.Item[1].id = '1';
+		SET OutputRoot.JSON.Data.response.propriedades.Item[1].propriedade.commodities.Item[1].descricao = 'Milho';
+		SET OutputRoot.JSON.Data.response.propriedades.Item[1].propriedade.commodities.Item[1].areaCultivada = '450 hc';
 		
-		SET OutputRoot.JSON.Data.propriedades.Item[1].propriedade.commodities.Item[2].id = '1';
-		SET OutputRoot.JSON.Data.propriedades.Item[1].propriedade.commodities.Item[2].descricao = 'Soja';
-		SET OutputRoot.JSON.Data.propriedades.Item[1].propriedade.commodities.Item[2].areaCultivada = '1350 hc';
+ 		SET OutputRoot.JSON.Data.response.propriedades.Item[1].propriedade.commodities.Item[2].id = '1';
+		SET OutputRoot.JSON.Data.response.propriedades.Item[1].propriedade.commodities.Item[2].descricao = 'Soja';
+		SET OutputRoot.JSON.Data.response.propriedades.Item[1].propriedade.commodities.Item[2].areaCultivada = '1350 hc';
 		
-		SET OutputRoot.JSON.Data.propriedades.Item[2].propriedade.id = '2';
-		SET OutputRoot.JSON.Data.propriedades.Item[2].propriedade.descrição = 'Fazenda Bodoquena';
-		SET OutputRoot.JSON.Data.propriedades.Item[2].propriedade.localizacao = 'Uberaba MG'; 
+		SET OutputRoot.JSON.Data.response.propriedades.Item[2].propriedade.id = '2';
+		SET OutputRoot.JSON.Data.response.propriedades.Item[2].propriedade.descricao = 'Fazenda Bodoquena';
+		SET OutputRoot.JSON.Data.response.propriedades.Item[2].propriedade.localizacao = 'Uberaba MG'; 
 	
-		SET OutputRoot.JSON.Data.propriedades.Item[2].propriedade.maquinas TYPE = JSON.Array;
+		SET OutputRoot.JSON.Data.response.propriedades.Item[2].propriedade.maquinas TYPE = JSON.Array;
 		
-		SET OutputRoot.JSON.Data.propriedades.Item[2].propriedade.maquinas.Item[1].id = '1';
-		SET OutputRoot.JSON.Data.propriedades.Item[2].propriedade.maquinas.Item[1].descricao = 'Trator';
-		SET OutputRoot.JSON.Data.propriedades.Item[2].propriedade.maquinas.Item[1].marca = 'Massey Fergusson';
-		SET OutputRoot.JSON.Data.propriedades.Item[2].propriedade.maquinas.Item[1].modelo = 'MF 4200';
-		SET OutputRoot.JSON.Data.propriedades.Item[2].propriedade.maquinas.Item[1].ano = '2017';
+		SET OutputRoot.JSON.Data.response.propriedades.Item[2].propriedade.maquinas.Item[1].id = '1';
+		SET OutputRoot.JSON.Data.response.propriedades.Item[2].propriedade.maquinas.Item[1].descricao = 'Trator';
+		SET OutputRoot.JSON.Data.response.propriedades.Item[2].propriedade.maquinas.Item[1].marca = 'Massey Fergusson';
+		SET OutputRoot.JSON.Data.response.propriedades.Item[2].propriedade.maquinas.Item[1].modelo = 'MF 4200';
+		SET OutputRoot.JSON.Data.response.propriedades.Item[2].propriedade.maquinas.Item[1].ano = '2017';
 		
-		SET OutputRoot.JSON.Data.propriedades.Item[2].propriedade.maquinas.Item[2].id = '2';
-		SET OutputRoot.JSON.Data.propriedades.Item[2].propriedade.maquinas.Item[2].descricao = 'Trator';
-		SET OutputRoot.JSON.Data.propriedades.Item[2].propriedade.maquinas.Item[2].marca = 'Massey Fergusson';
-		SET OutputRoot.JSON.Data.propriedades.Item[2].propriedade.maquinas.Item[2].modelo = 'MF 6700';
-		SET OutputRoot.JSON.Data.propriedades.Item[2].propriedade.maquinas.Item[2].ano = '2016';
+		SET OutputRoot.JSON.Data.response.propriedades.Item[2].propriedade.maquinas.Item[2].id = '2';
+		SET OutputRoot.JSON.Data.response.propriedades.Item[2].propriedade.maquinas.Item[2].descricao = 'Trator';
+		SET OutputRoot.JSON.Data.response.propriedades.Item[2].propriedade.maquinas.Item[2].marca = 'Massey Fergusson';
+		SET OutputRoot.JSON.Data.response.propriedades.Item[2].propriedade.maquinas.Item[2].modelo = 'MF 6700';
+		SET OutputRoot.JSON.Data.response.propriedades.Item[2].propriedade.maquinas.Item[2].ano = '2016';
 		
-		SET OutputRoot.JSON.Data.propriedades.Item[2].propriedade.commodities TYPE = JSON.Array;
+		SET OutputRoot.JSON.Data.response.propriedades.Item[2].propriedade.commodities TYPE = JSON.Array;
 	
-		SET OutputRoot.JSON.Data.propriedades.Item[2].propriedade.commodities.Item[1].id = '1';
-		SET OutputRoot.JSON.Data.propriedades.Item[2].propriedade.commodities.Item[1].descricao = 'Feijão';
-		SET OutputRoot.JSON.Data.propriedades.Item[2].propriedade.commodities.Item[1].areaCultivada = '320 hc';
+		SET OutputRoot.JSON.Data.response.propriedades.Item[2].propriedade.commodities.Item[1].id = '1';
+		SET OutputRoot.JSON.Data.response.propriedades.Item[2].propriedade.commodities.Item[1].descricao = 'Feijão';
+		SET OutputRoot.JSON.Data.response.propriedades.Item[2].propriedade.commodities.Item[1].areaCultivada = '320 hc';
 		
-		SET OutputRoot.JSON.Data.propriedades.Item[2].propriedade.commodities.Item[2].id = '2';
-		SET OutputRoot.JSON.Data.propriedades.Item[2].propriedade.commodities.Item[2].descricao = 'Milho';
-		SET OutputRoot.JSON.Data.propriedades.Item[2].propriedade.commodities.Item[2].areaCultivada = '1650 hc';
+		SET OutputRoot.JSON.Data.response.propriedades.Item[2].propriedade.commodities.Item[2].id = '2';
+		SET OutputRoot.JSON.Data.response.propriedades.Item[2].propriedade.commodities.Item[2].descricao = 'Milho';
+		SET OutputRoot.JSON.Data.response.propriedades.Item[2].propriedade.commodities.Item[2].areaCultivada = '1650 hc';
 			
 		RETURN TRUE;
 	END;

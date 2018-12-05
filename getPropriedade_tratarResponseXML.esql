@@ -1,0 +1,29 @@
+CREATE COMPUTE MODULE getPropriedade_tratarResponseXML
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+			
+		DECLARE propriedadesSize INTEGER CARDINALITY (InputRoot.JSON.Data.propriedades.Item[]);
+		DECLARE i INT 0;
+									
+		WHILE i < propriedadesSize DO	
+
+		SET i = i + 1;	
+	
+		SET OutputRoot.XMLNS.response.propriedades[i].cidade = InputRoot.JSON.Data.propriedades.Item[i].propriedade.localizacao;
+		
+		DECLARE maquinasSize INTEGER CARDINALITY (InputRoot.JSON.Data.propriedades.Item[i].propriedade.maquinas.Item[]);
+		DECLARE j INT 0;
+								
+			WHILE j < maquinasSize DO 
+				
+			SET j = j + 1;	
+			
+			SET OutputRoot.XMLNS.response.propriedades[i].maquinas.maquina[j] = InputRoot.JSON.Data.propriedades.Item[i].propriedade.maquinas.Item[j].modelo; 
+			
+			END WHILE;
+			
+		END WHILE;		
+		
+		RETURN TRUE;
+	END;
+END MODULE;
